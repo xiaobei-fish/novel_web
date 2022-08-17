@@ -12,7 +12,7 @@
 
 
 
-#### app.conf配置
+#### conf/app.conf配置
 
 ```shell
 appname = web
