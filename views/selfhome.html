@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/icon.css">
+    <link rel="stylesheet" href="../static/css/f.css">
+    <link rel="stylesheet" href="../static/js/layui/css/layui.css">
+    <title>个人页面</title>
+</head>
+
+<body>
+    <ul class="layui-nav aaa">
+        <li class="layui-nav-item">
+            <a href="javascript:;">{{.Username}}</a>
+            <dl class="layui-nav-child">
+                <dd><a id="alter" href="javascript:;">修改密码</a></dd>
+                <dd><a href='javascript:if (confirm("确定退出登录么？")){location="/exit"}'>退出登录</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/home">首页</a>
+            <!--首页跳转-->
+        </li>
+        <li class="layui-nav-item">
+            <a href="/selfhome">个人主页</a>
+        </li>
+
+        <li class="layui-nav-item">
+            <a href="/page">我的收藏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="/writer">作家专区</a>
+        </li>
+    </ul>
+    <div id="work_area">
+        <div style="margin: 100px;">
+            <!--
+                后面渲染一下量值。
+            -->
+            <p>我收藏的书籍数量:{{.CollectNum}}</p>
+            <p>我创作的书籍数量:{{.CreateNum}}</p>
+        </div>
+    </div>
+</body>
+<script src="../static/js/jQuery.min.js"></script>
+<script src="../static/js/layer-v3.1.1/layer/layer.js"></script>
+<script src="../static/js/jquery.form.js"></script>
+<script src="../static/js/layui/layui.js"></script>
+<script src="../static/js/alter.js"></script>
+<script src="../static/js/f.js"></script>
+
+</html>
